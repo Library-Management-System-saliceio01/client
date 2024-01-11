@@ -1,0 +1,19 @@
+.dashboard-template {
+  padding: 25px 15px;
+  max-height: 100%;
+
+  .dashboard-template-banner {
+    div {
+      text-align: center;
+      margin: 10px;
+      span {
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.content-body {
+  padding-bottom: 15px;
+}

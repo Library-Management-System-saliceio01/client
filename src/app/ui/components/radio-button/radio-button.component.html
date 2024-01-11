@@ -1,0 +1,4 @@
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button *ngFor="let radioData of radioButtonData" [value]="radioData.value"
+    (change)="radioChange($event)">{{radioData.label}}</mat-radio-button>
+</mat-radio-group>

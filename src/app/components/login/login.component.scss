@@ -1,0 +1,13 @@
+.container {
+  margin: 25px;
+
+  div {
+    margin: 10px 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+
+  ui-button {
+    width: 100%;
+  }
+}
+
+mat-dialog-content {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h2 {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}

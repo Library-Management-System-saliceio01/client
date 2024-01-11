@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <span>Library Management System</span>
+  <span class="example-spacer"></span>
+  @if (isLoggedIn) {
+  <div class="actions">
+    <button mat-flat-button (click)="onBookRedirect()">Books</button>
+    @if (isMember) {
+    <button mat-flat-button (click)="onMemberAnalytics()">Analytics</button>
+    }
+    @if (isLibrarian) {
+      <button mat-flat-button (click)="onLibrarianAnalytics()">Analytics</button>
+      }
+    <ui-user-account-menu [username]="userName" [menu_actions]="menuOptions"></ui-user-account-menu>
+  </div>
+  }
+  @if (!isLoggedIn) {
+  <div class="actions">
+    <button mat-flat-button (click)="onRegister()">
+      <span>Register</span>
+    </button>
+    <button mat-flat-button (click)="onLogin()">
+      <span>Login</span>
+    </button>
+  </div>
+  }
+</mat-toolbar>

@@ -1,0 +1,17 @@
+mat-dialog-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    ui-button {
+        width: 100%;
+    }
+}

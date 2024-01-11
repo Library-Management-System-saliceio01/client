@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.white-label {
+  color: white;
+}
+
+mat-form-field.full-width {
+  width: 100% !important;
+}
+
+mat-hint {
+  span {
+      color: red;
+  }
+}
+
+.custom-width {
+  width: 150px;
+  gap: 10px;
+}
+
+mat-form-field {
+  font-size: 14px;
+}

@@ -1,0 +1,9 @@
+<ui-icon-button [user_account]="true" [matMenuTriggerFor]="menu">{{
+  username
+  }}</ui-icon-button>
+<mat-menu #menu="matMenu">
+  <div class="items" *ngFor="let action of menu_actions">
+    <ui-button [mat_menu]="true" (clickEvent)="action.action()">{{ action.name
+      }}</ui-button>
+  </div>
+</mat-menu>

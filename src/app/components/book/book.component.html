@@ -1,0 +1,31 @@
+<div class="container">
+  @if(isLoading) {
+  <div class="spinner">
+    <ui-spinner></ui-spinner>
+  </div>
+  }
+  @if (!isLoading) {
+    <div class="table">
+      <ui-card>
+        <div slot="card_title" class="card-title">
+          <div class="fields">
+            <ui-input-field label="Title" [control]="title" />
+            <ui-input-field [control]="author" label="Author" />
+            <ui-input-field [control]="genre" label="Genre" />
+          </div>
+          <br />
+          <div class="search-button">
+          @if (isLibrarian) {
+            <ui-button [full_width]="true" (clickEvent)="onCreateBook()" [isLoading]="isLoading">Create Book</ui-button>
+          }
+          <ui-button (clickEvent)="resetFilters()" [full_width]="true" [isLoading]="isLoading">Reset filters</ui-button>
+          <ui-button (clickEvent)="getBooks()" [full_width]="true" [isLoading]="isLoading">Search</ui-button>
+        </div>
+      </div>
+      <div slot="card_content">
+        <ui-base-table [baseTable]="baseTableOptions" (pageChange)="onPageChange($event)" [showActions]="true"></ui-base-table>
+      </div>
+    </ui-card>
+  </div>
+  }
+</div>

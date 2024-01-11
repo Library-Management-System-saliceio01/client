@@ -1,0 +1,16 @@
+<div class="container">
+  <ui-card>
+    <div slot="card_title">
+      <h1>Register</h1>
+    </div>
+    <div slot="card_content" class="content">
+      <ui-input-field label="Username" [control]="username" />
+      <ui-input-field type="password" [control]="password" label="Password" />
+      <ui-input-field [control]="name" label="Name" />
+      <ui-input-select label="Rol" [valueOptions]="roles" [control]="role" [required]="true"></ui-input-select>
+    </div>
+    <div slot="card_actions">
+      <ui-button (clickEvent)="register()" [isLoading]="isLoading">Submit</ui-button>
+    </div>
+  </ui-card>
+</div>

@@ -1,0 +1,26 @@
+<mat-form-field [ngClass]="max_width ? 'custom-width select' : 'full-width'" [appearance]="'outline'">
+    <mat-label>{{ label }}</mat-label>
+    <input
+        [placeholder]="'Escriba aqui...'"
+        matInput
+        *ngIf="!textArea"
+        [defaultValue]="default_value"
+        [formControl]="control"
+        [type]="type"
+        (input)="onChange($event)"
+        [required]="required"
+    />
+    <span class="text-area">
+        <textarea
+            *ngIf="textArea"
+            [placeholder]="'Escriba sus comentarios aqui...'"
+            matInput
+            [defaultValue]="default_value"
+            [formControl]="control"
+            [type]="type"
+            (input)="onChange($event)"
+            [required]="required"
+        ></textarea>
+    </span>
+    <mat-hint *ngIf="control.invalid"><span>Complete field</span></mat-hint>
+</mat-form-field>

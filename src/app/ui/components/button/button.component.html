@@ -1,0 +1,6 @@
+<button mat-button [ngClass]="getClass()" [disabled]="disabled || isLoading" [type]="type" [color]="color"
+    (click)="onEmit()">
+    <mat-spinner *ngIf="isLoading" [diameter]="20" [color]="spinnerColor"></mat-spinner>
+    <mat-icon style="margin-right: 10px;" *ngIf="icon && !isLoading">{{ icon }}</mat-icon>
+    <span *ngIf="!isLoading"><ng-content></ng-content></span>
+</button>

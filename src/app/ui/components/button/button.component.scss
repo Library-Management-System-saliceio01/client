@@ -1,0 +1,42 @@
+.mat-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: inherit !important;
+    color: #7b8086 !important;
+    border-radius: 0 !important;
+    background-color: none !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+button {
+    background-color: #3949ab !important;
+    color: white !important;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 25px;
+    padding: 0 15px;
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3949ab;
+    color: white;
+}
+
+button:active {
+    background-color: #3949ab;
+    color: white;
+}

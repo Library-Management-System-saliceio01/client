@@ -1,0 +1,15 @@
+<div class="dashboard-template">
+  <div class="dashboard-template-banner">
+    <div>
+      <span *ngIf="title">&nbsp;{{ title }}</span>
+    </div>
+    <div class="filters" *ngIf="filters">
+      <mat-card>
+        <ng-content select="[slot=filters]"></ng-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="content-body">
+    <ng-content select="[slot=content]"></ng-content>
+  </div>
+</div>

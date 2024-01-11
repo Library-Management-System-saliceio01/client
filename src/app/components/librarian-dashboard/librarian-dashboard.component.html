@@ -1,0 +1,39 @@
+@if (!isLoading) {
+<div class="container"><ui-card>
+    <div slot="card_title">
+      <h2>Librarian Dashboard</h2>
+    </div>
+    <div slot="card_content" class="card-content">
+      <div class="data">
+        <h3>Books Quantity</h3>
+        <p>{{analytics.countBooks}}</p>
+      </div>
+      <div class="data">
+        <h3>Borowed Books Quantity</h3>
+        <p>{{analytics.userBorrowedBooks}}</p>
+      </div>
+      <div class="data">
+        <h3>Books Borrowed Expirated</h3>
+        @for (book of analytics.booksBorrowedExpiratedToday; track $index) {
+        <p>{{book.title}}</p>
+        }
+
+        @if(analytics.booksBorrowedExpiratedToday.length <= 0) { <p>No books expirated today</p>
+          }
+      </div>
+      <div class="data">
+        <h3>Users with Books Borrowed Expirated</h3>
+        @for (user of analytics.usersWithBooksBorrowedExpirated; track $index) {
+        <p>User: {{user.username}}</p>
+        }
+        @if(analytics.usersWithBooksBorrowedExpirated.length <= 0) { <p>No users with books expirated today</p>
+          }
+      </div>
+    </div>
+  </ui-card>
+</div>
+} @else {
+<div class="spinner">
+  <ui-spinner></ui-spinner>
+</div>
+}

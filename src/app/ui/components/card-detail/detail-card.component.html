@@ -1,0 +1,16 @@
+<div class="detail-container">
+  <div class="title" *ngIf="dataOption.length > 0">
+    <span>{{title}}</span>
+  </div>
+  <ul>
+    <li *ngFor="let data of dataOption">
+      <a *ngIf="data.isLink" class="label" target="_blank" [href]="data.value ? data.value : ''"><b>{{data.label ?
+          data.label:''}}</b></a>
+      <span *ngIf="!data.isLink" class="label"><b>{{data.label}}</b> : {{' '}}</span>
+      <span *ngIf="!data.isLink">{{ data.value ? data.value : ''}}</span>
+      <div class="children">
+        <ui-detail-card [dataOption]="data.children ? data.children : []"></ui-detail-card>
+      </div>
+    </li>
+  </ul>
+</div>

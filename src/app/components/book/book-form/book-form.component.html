@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>
+  Create Book
+</h2>
+<mat-dialog-content>
+  <ui-input-field label="Title" [control]="title" />
+  <ui-input-field [control]="author" label="Author" />
+  <ui-input-field [control]="genre" label="Genre" />
+  <ui-input-field [control]="isbn" label="Isbn" />
+  <ui-input-field [control]="totalCopies" label="Total Copies" [type]="'number'" />
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="actions">
+    <ui-button (clickEvent)="onClose()" [full_width]="true">Cerrar</ui-button>
+    <ui-button (clickEvent)="createBook()" [full_width]="true" [isLoading]="isLoading">Submit</ui-button>
+  </div>
+</mat-dialog-actions>

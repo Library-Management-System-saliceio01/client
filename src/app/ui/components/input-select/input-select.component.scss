@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: #7b8086;
+    font-size: 12px;
+}
+
+mat-form-field.full-width {
+    width: 100% !important;
+}
+
+.custom-width {
+    width: 150px;
+    gap: 10px;
+}
+
+mat-form-field {
+    font-size: 14px;
+}

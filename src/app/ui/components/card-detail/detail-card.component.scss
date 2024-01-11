@@ -1,0 +1,38 @@
+ul,
+li {
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.label {
+  color: #0048b5;
+}
+
+li {
+  margin: 5px 0;
+  font-size: 18px;
+
+  .children {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.children {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px 0;
+
+  span {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+}

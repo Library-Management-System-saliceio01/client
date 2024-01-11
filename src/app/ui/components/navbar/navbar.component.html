@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6" *ngFor="let route of routes">
+      <h2 class="module-title" *ngIf="route.isActive">{{route.module}}</h2>
+      <mat-list role="list" *ngFor="let childrenRoute of route.childrenRoutes">
+        <mat-list-item role="listitem"
+          *ngIf="childrenRoute.isActive && childrenRoute.route" [routerLink]="childrenRoute.route">
+          <span color="primary">
+            {{childrenRoute.name}}
+          </span>
+        </mat-list-item>
+        <mat-list-item role="listitem"
+          *ngIf="childrenRoute.isActive && !childrenRoute.route">
+          <span color="primary" (click)="childrenRoute?.action()">
+            {{childrenRoute.name}}
+          </span>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>
